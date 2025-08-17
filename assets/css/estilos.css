@@ -1,17 +1,40 @@
-/* Negro puro para la barra */
+/* --- Fondo negro real para la navbar --- */
 .bg-black {
   background-color: #000000 !important;
 }
 
-/* Tamaño del logo en la barra */
+/* --- Logo responsivo --- */
 .brand-logo {
-  width: 150px; /* ajusta este número a tu gusto (ej. 150px, 140px) */
-  height: auto; /* mantiene proporción */
+  height: auto;
   display: block;
 }
 
+/* Tamaños según pantalla */
+@media (min-width: 992px) {
+  /* Desktop */
+  .brand-logo {
+    width: 180px; /* logo más grande */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Tablet */
+  .brand-logo {
+    width: 140px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Móvil */
+  .brand-logo {
+    width: 100px;
+  }
+}
+
+/* Fuente general */
 body {
   font-family: "Raleway", sans-serif;
+  padding-top: 70px; /* evita que la navbar tape contenido */
 }
 
 /* Hero Section */
