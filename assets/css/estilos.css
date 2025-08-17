@@ -5,7 +5,7 @@
 
 /* Tamaño del logo en la barra */
 .brand-logo {
-  width: 180px; /* ajusta este número a tu gusto (ej. 150px, 140px) */
+  width: 150px; /* ajusta este número a tu gusto (ej. 150px, 140px) */
   height: auto; /* mantiene proporción */
   display: block;
 }
