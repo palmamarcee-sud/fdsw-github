@@ -1,78 +1,58 @@
-/* --- Fondo negro real para la navbar --- */
+/* ==== NAVBAR ==== */
 .bg-black {
   background-color: #000000 !important;
 }
 
-/* --- Logo responsivo --- */
+/* Logo responsivo */
 .brand-logo {
   height: auto;
   display: block;
   max-width: 100%;
 }
-
-/* Tamaños según pantalla */
 @media (min-width: 992px) {
-  /* Desktop */
   .brand-logo {
     width: 150px;
   }
-}
-
+} /* Desktop */
 @media (min-width: 768px) and (max-width: 991px) {
-  /* Tablet */
   .brand-logo {
     width: 140px;
   }
-}
-
+} /* Tablet */
 @media (max-width: 767px) {
-  /* Móvil */
   .brand-logo {
     width: 100px;
   }
-}
+} /* Móvil */
 
-/* Fuente general */
+/* Tipografía y compensación por navbar fija */
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Raleway", sans-serif;
-  padding-top: 70px; /* evita que la navbar tape contenido */
+  padding-top: 70px;
 }
 
 /* ===== HERO SECTION ===== */
 #Hero-Section {
-  position: relative;
-  background-image: url("../img/Foto-Marcee.jpeg");
+  min-height: 75vh; /* alto visible */
+  color: #fff;
+
+  /* overlay + imagen (sin ::before) */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../img/Foto-Marcee.jpeg"); /* cambia a .jpg si corresponde */
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
-  color: #fff;
 }
 
-/* Overlay oscuro encima de la imagen */
-#Hero-Section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-
-/* Texto del Hero por encima del overlay */
-#Hero-Section .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Botones del Hero con hover elegante */
-#Hero-Section .btn {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-#Hero-Section .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+@media (max-width: 768px) {
+  /* en móvil centramos el rostro */
+  #Hero-Section {
+    background-position: center top;
+  }
 }
 
 /* ===== SECCIÓN MIS TRABAJOS ===== */
@@ -88,7 +68,6 @@ body {
   font-weight: 700;
   color: #222;
 }
-
 @media (max-width: 768px) {
   #Contacto form label {
     font-weight: 400;
@@ -98,18 +77,16 @@ body {
   }
 }
 
-/* ===== CARDS ===== */
-/* Igualar altura de todas las cards */
+/* ===== CARDS GENÉRICAS ===== */
 .row .col > .card {
   height: 100%;
 }
 
-/* Estilo base de las cards */
 .card {
   border-radius: 12px;
+  border: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 0;
 }
 .card:hover {
   transform: translateY(-5px);
@@ -125,7 +102,7 @@ body {
   color: #0dcaf0;
 }
 
-/* Imágenes superiores */
+/* Imágenes superiores uniformes */
 .card-img-top {
   height: 200px;
   object-fit: cover;
@@ -134,7 +111,7 @@ body {
   border-top-right-radius: 12px;
 }
 
-/* Tipografía interna */
+/* Tipografía de cards */
 .card-title {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
@@ -144,7 +121,6 @@ body {
   line-height: 1.6;
 }
 
-/* Ajustes móviles */
 @media (max-width: 576px) {
   .card-img-top {
     height: 180px;
