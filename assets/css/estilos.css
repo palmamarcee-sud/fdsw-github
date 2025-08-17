@@ -1,3 +1,15 @@
+/* Negro puro para la barra */
+.bg-black {
+  background-color: #000000 !important;
+}
+
+/* Tamaño del logo en la barra */
+.brand-logo {
+  width: 180px; /* ajusta este número a tu gusto (ej. 150px, 140px) */
+  height: auto; /* mantiene proporción */
+  display: block;
+}
+
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -24,7 +36,7 @@ body {
 
 #Contacto form label {
   font-weight: 700;
-  color: #373a3c;
+  color: black;
 }
 
 @media (max-width: 768px) {
@@ -32,8 +44,7 @@ body {
     font-weight: 400;
   }
 
-  .navbar-brand{
+  .navbar-brand {
     width: 100px;
   }
-
 }
